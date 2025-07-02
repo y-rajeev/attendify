@@ -43,6 +43,49 @@ python Attendify.py
 
 ---
 
+### 🛠️ Build .exe File (Optional)
+
+If you'd like to create a standalone Windows `.exe` file from the source code, you can do so using PyInstaller:
+
+#### ✅ Steps:
+
+1. **Install PyInstaller:**
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Navigate to the project folder:**
+
+   ```bash
+   cd path/to/attendify
+   ```
+
+3. **Build the .exe:**
+
+   ```bash
+   pyinstaller --onefile --noconsole --name Attendify Attendify.py
+   ```
+   - `--onefile`: Packages everything into one .exe
+   - `--noconsole`: Hides terminal window (for GUI)
+   - `--name Attendify`: Sets output name as Attendify.exe
+
+4. **Find your executable in the `dist/` folder:**
+
+   ```
+   Attendify/
+   └── dist/
+       └── Attendify.exe
+   ```
+
+💡 **Optional: Add icon (Windows only)**
+
+```bash
+pyinstaller --onefile --noconsole --name Attendify --icon=assets/app_icon.ico Attendify.py
+```
+
+---
+
 ### 🖼️ Screenshot
 
 ![Attendify GUI](assets/image.png)
